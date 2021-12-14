@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-all {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-side img{
+    width: 900px;
+    height: 100vh;
+}
+
+@media screen and (max-width: 1000px){
+    .login-side img{
+        width: 1000px;
+        height: 100vh;
+    }
+    .login-input{
+        position: absolute !important;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 400px;
+        width: 500px !important;
+        background: rgba(255,255,255,.5);
+    }
+}
+.login-input{
+    margin-top: 10%;
+    height: 400px;
+    background: rgba(255,255,255,.5);
+}
+
+.login-input h1{
+    margin: 10px auto 10px 45px;
+}

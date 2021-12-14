@@ -1,0 +1,49 @@
+.footer-content {
+    background: url("../images/footer.png");
+    background-size: cover;
+    height: 300px;
+}
+
+.footer-content ul {
+    display: flex;
+    text-align: center;
+    background: url("../images/footer_log.png") no-repeat;
+    padding-left: 131px;
+    margin: 80px 0 10px;
+    height: 70px;
+    color: #aa8764;
+}
+
+.footer-content ul li {
+    padding: 35px 34px 0 40px;
+}
+
+.footer-content ul li:nth-child(1) {
+    list-style: none;
+}
+
+@media screen and (max-width: 850px) {
+    .footer-content ul {
+        display: flex;
+        text-align: center;
+        background: url("../images/footer_log.png") no-repeat;
+        padding-left: 131px;
+        margin: 80px 0 60px;
+        height: 70px;
+        color: #aa8764;
+    }
+}
+
+.footer-content .loc {
+    color: #9B9B9B;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}
+.footer-content .loc-company{
+    margin-top: 40px;
+    color: #9B9B9B;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+}

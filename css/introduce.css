@@ -1,0 +1,36 @@
+@import "footer.css";
+
+.container-all {
+    overflow: hidden;
+}
+
+.context-container {
+    position: relative;
+}
+
+.context {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 20px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.context h3 {
+    color: #deb869;
+}
+
+@media screen and (max-width: 1200px) {
+    .context {
+        position: static;
+        transform: translateY(0);
+        margin: 50px 0;
+        text-align: center;
+        background: #fff;
+    }
+    .context h3 {
+        color: #deb869;
+        margin-bottom: 20px;
+    }
+}

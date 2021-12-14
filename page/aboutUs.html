@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于我们</title>
+    <link href="../css/aboutUs.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        let img1Height;
+        let img2Height;
+        $(function () {
+            let navHeight = $(".nav-top")[0].clientHeight
+            let contentHeight = $(".context")[0].clientHeight
+            $("#img1").on("load", function () {
+                img1Height = $(this).height();
+            });
+            $("#img2").on("load", function () {
+                img2Height = $(this).height();
+            });
+            $(document).scroll(function () {
+                var scroH = $(document).scrollTop();  //滚动高度
+                var viewH = $(window).height();  //可见高度
+                var contentH = $(document).height();  //内容高度
+                if (scroH > navHeight + img1Height + 105) {
+                    $("#img1").css("position", "relative")
+                } else {
+                    $("#img1").css("position", "sticky")
+                }
+                if (scroH > navHeight + img1Height + img2Height + 430) {
+                    $("#img2").css("position", "relative")
+                } else {
+                    $("#img2").css("position", "sticky")
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="container-fluid text-wrap nav-top">
+    <!--    导航栏    -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light nav-position">
+            <a class="navbar-brand col-md-0" href="#">
+                <img alt="" class="d-none d-lg-block align-top" src="../images/header_logo.png">
+            </a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-target="#navbarNav"
+                    data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="margin-top: 40px;">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="./main.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="./cake.html">蛋糕</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="./afternoonTea.html">下午茶</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-nowrap" href="./aboutUs.html">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nowrap" href="./introduce.html">介绍</a>
+                    </li>
+                </ul>
+                <form action="login.html" class="form-inline text-nowrap">
+                    <button class="btn btn-sm" id="login">登录</button>
+                    <span>|</span>
+                    <button class="btn btn-sm">注册</button>
+                    <img alt="" src="../images/shop_bag.png">
+                </form>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container-all">
+    <img alt="" class="img-fluid" id="img1" src="../images/aboutUs_01.jpg">
+    <div class="context">
+        <h3>品牌介绍</h3>
+        <p>Croissants de France 一个伴你成长的法国品牌，</p>
+        <p>25年前在法国小镇里维埃拉，我和你的故事从分享同一片面包开始</p>
+        <p>一段邂逅，一个约定，造就了一个满含匠人情怀的品牌，</p>
+        <p>岁月的坚守始终改变不了“法式经典好味道”的信条，</p>
+        <p>抹不去，对“手工现烤”专注“高端品质”的不懈努力。</p>
+        <p>一路走来，我们在不断的升级换代中提高自己，融入前卫的设计理念，让橱窗更明亮，让质量更扎实，</p>
+        <p>一路走来，我们在不断的升级换代中提高自己，融入前卫的设计理念，让橱窗更明亮，让质量更扎实，</p>
+        <p>产品选择更丰富……时代在变，但始终不变的是可颂坊对匠心的坚守，和那25年前的约定。</p>
+    </div>
+    <img alt="" class="img-fluid" id="img2" src="../images/aboutUs_02.jpg">
+    <div class="context">
+        <h3>品牌理念</h3>
+        <p>多样的产品结构，卓越的研发能力，为热爱烘焙追随时尚的顾客提供全方位的美味选择。</p>
+        <p>传承法式的烘焙工艺，匠心现烤保证新鲜美味，这就是可颂坊为您量身定制的专属口味。</p>
+        <p>优质的服务带给您宾至如归的感受，时尚潮流的门店风格带给您全新的消费体验，</p>
+        <p>我们做到坚持手作现烤，保证产品质量，将爱传递，让幸福生长。</p>
+    </div>
+    <img alt="" class="img-fluid" id="img3" src="../images/aboutUs_01.jpg">
+    <div class="context">
+        <h3>品牌介绍</h3>
+        <p>Croissants de France 一个伴你成长的法国品牌，</p>
+        <p>25年前在法国小镇里维埃拉，我和你的故事从分享同一片面包开始</p>
+        <p>一段邂逅，一个约定，造就了一个满含匠人情怀的品牌，</p>
+        <p>岁月的坚守始终改变不了“法式经典好味道”的信条，</p>
+        <p>抹不去，对“手工现烤”专注“高端品质”的不懈努力。</p>
+        <p>一路走来，我们在不断的升级换代中提高自己，融入前卫的设计理念，让橱窗更明亮，让质量更扎实，</p>
+        <p>一路走来，我们在不断的升级换代中提高自己，融入前卫的设计理念，让橱窗更明亮，让质量更扎实，</p>
+        <p>产品选择更丰富……时代在变，但始终不变的是可颂坊对匠心的坚守，和那25年前的约定。</p>
+    </div>
+</div>
+<!--  底部  -->
+<div class="container-fluid footer-content">
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <li class="col-md-2 col-sm-1">关于我们</li>
+                <li class="col-md-2 col-sm-1">最新活动</li>
+                <li class="col-md-2 col-sm-1">企业专区</li>
+                <li class="col-md-2 col-sm-1">公益活动</li>
+                <li class="col-md-2 col-sm-1">公众号</li>
+                <li class="col-md-2 col-sm-1">招聘</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row justify-content-center loc">
+        <div class="col">小蜜蜂蛋糕 提前3小时预订，北京市六环内免费配送 公司地址：北京市朝阳区798艺术区工美楼3层</div>
+    </div>
+    <div class="row justify-content-center loc-company">
+        <div class="col">
+            Copyright © 2009-2019 ebeecake 易贝可（北京）食品有限公司 京ICP备09081733号 京公网安备110105014692
+            <br>
+            公司电话：4006106798
+            <a href="#">食品经营许可证：JY11105110232865</a>
+            <a href="#">食品生产许可证：SC12411051114584</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
